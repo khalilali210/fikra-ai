@@ -1,0 +1,17 @@
+name: AI App Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get project code
+        uses: actions/checkout@v4
+
+      - name: Check workflow
+        run: echo "AI app workflow started successfully"
